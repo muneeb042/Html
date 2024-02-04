@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        button {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
+
+</head>
+
+<body class="p-8 flex items-center justify-center flex-col">
+    <p id="output" class="mb-10 ">0</p>
+    
+    <div class="flex gap-3">
+        <button onclick="Inc()" id="add" class="px-2 py-1 rounded bg-gray-400"> Add </button>
+        <button onclick="Dec()" id="sub" class="px-2 py-1 rounded bg-gray-400"> Sub </button>
+    </div>
+    
+    <script>
+        const output = document.getElementById("output");
+        let countVal = 0
+        function Inc(){
+            countVal = countVal + 1;
+            output.innerHTML = countVal;
+
+        }
+        function Dec(){
+            countVal = countVal - 1;
+            output.innerHTML = countVal;
+
+        }
+    </script>
+</body>
+    
+
+</html>
